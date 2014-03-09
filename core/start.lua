@@ -1,3 +1,3 @@
 print("Welcome to Nucleus!")
 -- Temp
-os.run({}, "shell");
+os.run({}, "/rom/programs/shell");
