@@ -2,9 +2,18 @@ print("Nucleus Starting Up...")
 
 if http then
 	print("Grabbing start.lua...")
-	local fh = http.get("http://..../start.lua")
+	local fh = http.get("https://github.com/Sxw1212/Nucleus/raw/master/core/start.lua")
 	if fh then
-	
+		print("Starting...")
+		local err, res = loadstring(fh.readAll())
+		if err then
+			print("ERROR: Unable to run start.lua")
+			print(err)
+		else
+			res()
+			sleep(5)
+			os.shutdown()
+		end
 	else
 		print("ERROR: Unable to fetch start.lua. Please check your network.")
 	end
