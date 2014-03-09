@@ -19,5 +19,7 @@ else
 	print("ERROR: Please enable http for Nucleus to work.")
 end
 
-sleep(5)
-os.shutdown()
+if not _G.NUCLEUS then
+	sleep(5)
+	os.shutdown()
+end

@@ -1,9 +1,3 @@
-if _NUCLEUS then
-	return
-else
-	_NUCLEUS = true
-end
+_G.NUCLEUS = true
 
 print("Welcome to Nucleus!")
--- Temp
-os.run({}, "/rom/programs/shell")
