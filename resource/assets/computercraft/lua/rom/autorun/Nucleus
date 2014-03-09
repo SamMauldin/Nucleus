@@ -1,0 +1,15 @@
+print("Nucleus Starting Up...")
+
+if http then
+	print("Grabbing start.lua...")
+	local fh = http.get("http://..../start.lua")
+	if fh then
+	
+	else
+		print("ERROR: Unable to fetch start.lua. Please check your network.")
+	end
+else
+	print("ERROR: Please enable http for Nucleus to work.")
+	sleep(5)
+	os.shutdown()
+end
