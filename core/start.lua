@@ -1,3 +1,3 @@
 print("Welcome to Nucleus!")
 -- Temp
-shell.run("shell");
+os.run({}, "shell");
